@@ -1,1 +1,6 @@
-IyBMb2NhbCB0ZXN0IGFydGlmYWN0cwoqLmxvZwoqLnRtcAoKIyBQYWNrYWdlZCByZWxlYXNlcwoqLnppcAo=
+# Local test artifacts
+*.log
+*.tmp
+
+# Packaged releases
+*.zip

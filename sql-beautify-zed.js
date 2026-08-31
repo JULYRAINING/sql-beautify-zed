@@ -1,1 +1,37 @@
-IyEvdXNyL2Jpbi9lbnYgbm9kZQondXNlIHN0cmljdCc7Cgpjb25zdCBjcnlwdG8gPSByZXF1aXJlKCdjcnlwdG8nKTsKY29uc3QgZnMgPSByZXF1aXJlKCdmcycpOwpjb25zdCBwYXRoID0gcmVxdWlyZSgncGF0aCcpOwoKY29uc3QgZm9ybWF0dGVyUGF0aCA9IHBhdGguam9pbihfX2Rpcm5hbWUsICd2ZW5kb3InLCAndmtiZWF1dGlmeS0wLjk5LjEnLCAnaW5kZXguanMnKTsKY29uc3QgZXhwZWN0ZWRTaGExID0gJ2RkZTIxNWI1ZmZlOTg4ZDdlNTRlMzgzZDI3ZTg0OWNhMDc0OTc0MTInOwoKZnVuY3Rpb24gZmFpbChtZXNzYWdlKSB7CiAgcHJvY2Vzcy5zdGRlcnIud3JpdGUoYHNxbC1iZWF1dGlmeS16ZWQ6ICR7bWVzc2FnZX1cbmApOwogIHByb2Nlc3MuZXhpdENvZGUgPSAxOwp9Cgp0cnkgewogIGNvbnN0IGFjdHVhbFNoYTEgPSBjcnlwdG8uY3JlYXRlSGFzaCgnc2hhMScpLnVwZGF0ZShmcy5yZWFkRmlsZVN5bmMoZm9ybWF0dGVyUGF0aCkpLmRpZ2VzdCgnaGV4Jyk7CiAgaWYgKGFjdHVhbFNoYTEgIT09IGV4cGVjdGVkU2hhMSkgewogICAgdGhyb3cgbmV3IEVycm9yKGBmb3JtYXR0ZXIgaW50ZWdyaXR5IGNoZWNrIGZhaWxlZCAoJHthY3R1YWxTaGExfSlgKTsKICB9CgogIGNvbnN0IGlucHV0ID0gZnMucmVhZEZpbGVTeW5jKDAsICd1dGY4Jyk7CiAgY29uc3QgZm9ybWF0dGVyID0gcmVxdWlyZShmb3JtYXR0ZXJQYXRoKTsKICBjb25zdCBvcmlnaW5hbExvZyA9IGNvbnNvbGUubG9nOwogIGxldCBvdXRwdXQ7CiAgdHJ5IHsKICAgIC8vIFRoZSBidW5kbGVkIGZvcm1hdHRlciB1c2VzIGNvbnNvbGUubG9nIGludGVybmFsbHkuIFplZCBleHBlY3RzIHN0ZG91dAogICAgLy8gdG8gY29udGFpbiB0aGUgZm9ybWF0dGVkIGRvY3VtZW50IG9ubHkuCiAgICBjb25zb2xlLmxvZyA9ICgpID0+IHt9OwogICAgb3V0cHV0ID0gZm9ybWF0dGVyLnNxbChpbnB1dCwgdHJ1ZSwgZmFsc2UsIGZhbHNlLCAxNTApOwogIH0gZmluYWxseSB7CiAgICBjb25zb2xlLmxvZyA9IG9yaWdpbmFsTG9nOwogIH0KICBwcm9jZXNzLnN0ZG91dC53cml0ZShvdXRwdXQpOwp9IGNhdGNoIChlcnJvcikgewogIGZhaWwoZXJyb3IubWVzc2FnZSk7Cn0K
+#!/usr/bin/env node
+'use strict';
+
+const crypto = require('crypto');
+const fs = require('fs');
+const path = require('path');
+
+const formatterPath = path.join(__dirname, 'vendor', 'vkbeautify-0.99.1', 'index.js');
+const expectedSha1 = 'dde215b5ffe988d7e54e383d27e849ca07497412';
+
+function fail(message) {
+  process.stderr.write(`sql-beautify-zed: ${message}\n`);
+  process.exitCode = 1;
+}
+
+try {
+  const actualSha1 = crypto.createHash('sha1').update(fs.readFileSync(formatterPath)).digest('hex');
+  if (actualSha1 !== expectedSha1) {
+    throw new Error(`formatter integrity check failed (${actualSha1})`);
+  }
+
+  const input = fs.readFileSync(0, 'utf8');
+  const formatter = require(formatterPath);
+  const originalLog = console.log;
+  let output;
+  try {
+    // The bundled formatter uses console.log internally. Zed expects stdout
+    // to contain the formatted document only.
+    console.log = () => {};
+    output = formatter.sql(input, true, false, false, 150);
+  } finally {
+    console.log = originalLog;
+  }
+  process.stdout.write(output);
+} catch (error) {
+  fail(error.message);
+}

@@ -1,1 +1,40 @@
-W0NtZGxldEJpbmRpbmcoKV0KcGFyYW0oCiAgICBbc3dpdGNoXSRBcHBseQopCgokRXJyb3JBY3Rpb25QcmVmZXJlbmNlID0gJ1N0b3AnCiRzb3VyY2VSb290ID0gU3BsaXQtUGF0aCAtUGFyZW50ICRQU0NvbW1hbmRQYXRoCiR0YXJnZXRSb290ID0gSm9pbi1QYXRoICRlbnY6VVNFUlBST0ZJTEUgJy5sb2NhbFxzaGFyZVxzcWwtYmVhdXRpZnktemVkJwokdGFyZ2V0QmluID0gSm9pbi1QYXRoICRlbnY6VVNFUlBST0ZJTEUgJy5sb2NhbFxiaW4nCiR0YXJnZXRDb21tYW5kID0gSm9pbi1QYXRoICR0YXJnZXRCaW4gJ3NxbC1iZWF1dGlmeS16ZWQuY21kJwokc2V0dGluZ3NQYXRoID0gSm9pbi1QYXRoICRlbnY6QVBQREFUQSAnWmVkXHNldHRpbmdzLmpzb24nCgppZiAoLW5vdCAoR2V0LUNvbW1hbmQgbm9kZSAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSkpIHsKICAgIHRocm93ICdOb2RlLmpzIHdhcyBub3QgZm91bmQgb24gUEFUSC4gSW5zdGFsbCBOb2RlLmpzIExUUyBmcm9tIGh0dHBzOi8vbm9kZWpzLm9yZy8gYW5kIHJlb3BlbiBQb3dlclNoZWxsLicKfQoKV3JpdGUtSG9zdCAiRm9ybWF0dGVyIHRhcmdldDogJHRhcmdldENvbW1hbmQiCldyaXRlLUhvc3QgIlplZCBzZXR0aW5nczogICAgICRzZXR0aW5nc1BhdGgiCmlmICgtbm90ICRBcHBseSkgewogICAgV3JpdGUtSG9zdCAnRHJ5IHJ1biBvbmx5LiBSZS1ydW4gd2l0aDogLlxpbnN0YWxsLnBzMSAtQXBwbHknCiAgICBleGl0IDAKfQoKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJHRhcmdldFJvb3QsICR0YXJnZXRCaW4gfCBPdXQtTnVsbApDb3B5LUl0ZW0gLVJlY3Vyc2UgLUZvcmNlIChKb2luLVBhdGggJHNvdXJjZVJvb3QgJ3ZlbmRvcicpIChKb2luLVBhdGggJHRhcmdldFJvb3QgJ3ZlbmRvcicpCkNvcHktSXRlbSAtRm9yY2UgKEpvaW4tUGF0aCAkc291cmNlUm9vdCAnc3FsLWJlYXV0aWZ5LXplZC5qcycpIChKb2luLVBhdGggJHRhcmdldFJvb3QgJ3NxbC1iZWF1dGlmeS16ZWQuanMnKQpDb3B5LUl0ZW0gLUZvcmNlIChKb2luLVBhdGggJHNvdXJjZVJvb3QgJ2NvbmZpZ3VyZS16ZWQuanMnKSAoSm9pbi1QYXRoICR0YXJnZXRSb290ICdjb25maWd1cmUtemVkLmpzJykKQ29weS1JdGVtIC1Gb3JjZSAoSm9pbi1QYXRoICRzb3VyY2VSb290ICdiaW5cc3FsLWJlYXV0aWZ5LXplZC5jbWQnKSAkdGFyZ2V0Q29tbWFuZAoKaWYgKFRlc3QtUGF0aCAkc2V0dGluZ3NQYXRoKSB7CiAgICAkYmFja3VwUGF0aCA9ICIkc2V0dGluZ3NQYXRoLnNxbC1iZWF1dGlmeS16ZWQtYmFja3VwLSQoR2V0LURhdGUgLUZvcm1hdCAneXl5eU1NZGQtSEhtbXNzJykiCiAgICBDb3B5LUl0ZW0gLUZvcmNlICRzZXR0aW5nc1BhdGggJGJhY2t1cFBhdGgKICAgIFdyaXRlLUhvc3QgIlNldHRpbmdzIGJhY2t1cDogICRiYWNrdXBQYXRoIgp9Cgpub2RlIChKb2luLVBhdGggJHRhcmdldFJvb3QgJ2NvbmZpZ3VyZS16ZWQuanMnKSAkc2V0dGluZ3NQYXRoICR0YXJnZXRDb21tYW5kCidzZWxlY3QgaWQsY2FzZSB3aGVuIHN0YXR1cz0xIHRoZW4gJyfmraPluLgnJyBlbHNlICcn5byC5bi4JycgZW5kIGFzIHN0YXR1c19uYW1lIGZyb20gb3JkZXJzIHdoZXJlIGlkPTE7JyB8CiAgICAmICR0YXJnZXRDb21tYW5kCgpXcml0ZS1Ib3N0ICdJbnN0YWxsZWQuIFJlc3RhcnQgWmVkIGlmIGl0IHdhcyBhbHJlYWR5IHJ1bm5pbmcuJwo=
+[CmdletBinding()]
+param(
+    [switch]$Apply
+)
+
+$ErrorActionPreference = 'Stop'
+$sourceRoot = Split-Path -Parent $PSCommandPath
+$targetRoot = Join-Path $env:USERPROFILE '.local\share\sql-beautify-zed'
+$targetBin = Join-Path $env:USERPROFILE '.local\bin'
+$targetCommand = Join-Path $targetBin 'sql-beautify-zed.cmd'
+$settingsPath = Join-Path $env:APPDATA 'Zed\settings.json'
+
+if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
+    throw 'Node.js was not found on PATH. Install Node.js LTS from https://nodejs.org/ and reopen PowerShell.'
+}
+
+Write-Host "Formatter target: $targetCommand"
+Write-Host "Zed settings:     $settingsPath"
+if (-not $Apply) {
+    Write-Host 'Dry run only. Re-run with: .\install.ps1 -Apply'
+    exit 0
+}
+
+New-Item -ItemType Directory -Force -Path $targetRoot, $targetBin | Out-Null
+Copy-Item -Recurse -Force (Join-Path $sourceRoot 'vendor') (Join-Path $targetRoot 'vendor')
+Copy-Item -Force (Join-Path $sourceRoot 'sql-beautify-zed.js') (Join-Path $targetRoot 'sql-beautify-zed.js')
+Copy-Item -Force (Join-Path $sourceRoot 'configure-zed.js') (Join-Path $targetRoot 'configure-zed.js')
+Copy-Item -Force (Join-Path $sourceRoot 'bin\sql-beautify-zed.cmd') $targetCommand
+
+if (Test-Path $settingsPath) {
+    $backupPath = "$settingsPath.sql-beautify-zed-backup-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
+    Copy-Item -Force $settingsPath $backupPath
+    Write-Host "Settings backup:  $backupPath"
+}
+
+node (Join-Path $targetRoot 'configure-zed.js') $settingsPath $targetCommand
+'select id,case when status=1 then ''正常'' else ''异常'' end as status_name from orders where id=1;' |
+    & $targetCommand
+
+Write-Host 'Installed. Restart Zed if it was already running.'

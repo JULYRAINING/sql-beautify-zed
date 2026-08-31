@@ -1,1 +1,67 @@
-IyBTUUwgQmVhdXRpZnkgZm9yIFplZAoKQSBXaW5kb3dzIGluc3RhbGxlciBmb3IgdXNpbmcgdGhlIGN1c3RvbWl6ZWQgU1FMIGZvcm1hdHRlciBidW5kbGVkIHdpdGggVlMgQ29kZQpleHRlbnNpb24gYGNsYXJreXUudnNjb2RlLXNxbC1iZWF1dGlmeWAgdmVyc2lvbiBgMC4zLjIzYCBmcm9tIFplZC4KCkl0IGludGVudGlvbmFsbHkgdmVuZG9ycyB0aGUgZm9ybWF0dGVyIHNvdXJjZSB0aGF0IHRoZSBleHRlbnNpb24gYWN0dWFsbHkKbG9hZHMuIFRoaXMgaXMgbm90IGVxdWl2YWxlbnQgdG8gaW5zdGFsbGluZyB0aGUgY3VycmVudCBucG0gYHZrYmVhdXRpZnlgCnBhY2thZ2U6IHRoZSBidW5kbGVkIHNvdXJjZSBjb250YWlucyBTUUwtc3BlY2lmaWMgQ0FTRSBmb3JtYXR0aW5nLCBxdW90aW5nLApjb21tZW50LCBpbmRlbnRhdGlvbiwgYW5kIEFTLWFsaWdubWVudCBsb2dpYy4KCiMjIFJlcXVpcmVtZW50cwoKLSBXaW5kb3dzCi0gTm9kZS5qcyBMVFMsIGF2YWlsYWJsZSBhcyBgbm9kZWAgaW4gUG93ZXJTaGVsbAotIFplZAoKIyMgSW5zdGFsbAoKRG93bmxvYWQgYSByZWxlYXNlIFpJUCwgZXh0cmFjdCBpdCwgdGhlbiBvcGVuIFBvd2VyU2hlbGwgaW4gdGhlIGV4dHJhY3RlZApkaXJlY3Rvcnk6CgpgYGBwb3dlcnNoZWxsCiMgUHJldmlldyBwYXRocyBhbmQgcHJlcmVxdWlzaXRlcyBvbmx5Lgpwb3dlcnNoZWxsIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIC5caW5zdGFsbC5wczEKCiMgSW5zdGFsbCB1bmRlciAlVVNFUlBST0ZJTEUlXC5sb2NhbCBhbmQgY29uZmlndXJlIFplZC4KcG93ZXJzaGVsbCAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSAuXGluc3RhbGwucHMxIC1BcHBseQpgYGAKClRoZSBpbnN0YWxsZXIgYmFja3MgdXAgYW4gZXhpc3RpbmcgWmVkIHNldHRpbmdzIGZpbGUgYmVmb3JlIHVwZGF0aW5nIGl0cyBTUUwKZm9ybWF0dGVyIGNvbmZpZ3VyYXRpb24uIFJlc3RhcnQgWmVkIGFmdGVyIGluc3RhbGxhdGlvbi4KCiMjIFdoYXQgWmVkIHJ1bnMKClplZCBjYWxscyB0aGlzIHN0YW5kYXJkLWlucHV0L3N0YW5kYXJkLW91dHB1dCBjb21tYW5kOgoKYGBgdGV4dAolVVNFUlBST0ZJTEUlXC5sb2NhbFxiaW5cc3FsLWJlYXV0aWZ5LXplZC5jbWQKYGBgCgpUaGUgZm9ybWF0dGVyIHBpbnMgdGhlIGV4YWN0IHZlbmRvcmVkIHNvdXJjZSB1c2luZyBTSEEtMQpgZGRlMjE1YjVmZmU5ODhkN2U1NGUzODNkMjdlODQ5Y2EwNzQ5NzQxMmAsIHNvIGFuIHVwZGF0ZSB0byB0aGUgVlMgQ29kZQpleHRlbnNpb24gY2Fubm90IGNoYW5nZSBpdHMgb3V0cHV0LgoKIyMgRXhhbXBsZQoKSW5wdXQ6CgpgYGBzcWwKc2VsZWN0IGlkLGNhc2Ugd2hlbiBzdGF0dXM9MSB0aGVuICfmraPluLgnIGVsc2UgJ+W8guW4uCcgZW5kIGFzIHN0YXR1c19uYW1lIGZyb20gb3JkZXJzIHdoZXJlIGlkPTE7CmBgYAoKT3V0cHV0OgoKYGBgc3FsClNFTEVDVCAgaWQKICAgICAgICxDQVNFIFdIRU4gc3RhdHVzID0gMSBUSEVOICfmraPluLgnICBFTFNFICflvILluLgnIEVORCBBUyBzdGF0dXNfbmFtZQpGUk9NIG9yZGVycwpXSEVSRSBpZCA9IDE7CmBgYAoKIyMgTGljZW5zZXMgYW5kIHByb3ZlbmFuY2UKClRoZSB2ZW5kb3JlZCBmb3JtYXR0ZXIgd2FzIGV4dHJhY3RlZCBmcm9tIHRoZSBsb2NhbGx5IGluc3RhbGxlZCBWUyBDb2RlCmV4dGVuc2lvbiBhYm92ZS4gSXRzIHVwc3RyZWFtIGFuZCBleHRlbnNpb24gbGljZW5zZXMgYXJlIHJldGFpbmVkIGluCltUSElSRF9QQVJUWV9OT1RJQ0VTLm1kXShUSElSRF9QQVJUWV9OT1RJQ0VTLm1kKS4gVGhlIHdyYXBwZXIgYW5kIGluc3RhbGxlciBpbgp0aGlzIHJlcG9zaXRvcnkgYXJlIE1JVC1saWNlbnNlZDsgc2VlIFtMSUNFTlNFXShMSUNFTlNFKS4K
+# SQL Beautify for Zed
+
+A Windows installer for using the customized SQL formatter bundled with VS Code
+extension `clarkyu.vscode-sql-beautify` version `0.3.23` from Zed.
+
+It intentionally vendors the formatter source that the extension actually
+loads. This is not equivalent to installing the current npm `vkbeautify`
+package: the bundled source contains SQL-specific CASE formatting, quoting,
+comment, indentation, and AS-alignment logic.
+
+## Requirements
+
+- Windows
+- Node.js LTS, available as `node` in PowerShell
+- Zed
+
+## Install
+
+Download a release ZIP, extract it, then open PowerShell in the extracted
+directory:
+
+```powershell
+# Preview paths and prerequisites only.
+powershell -ExecutionPolicy Bypass -File .\install.ps1
+
+# Install under %USERPROFILE%\.local and configure Zed.
+powershell -ExecutionPolicy Bypass -File .\install.ps1 -Apply
+```
+
+The installer backs up an existing Zed settings file before updating its SQL
+formatter configuration. Restart Zed after installation.
+
+## What Zed runs
+
+Zed calls this standard-input/standard-output command:
+
+```text
+%USERPROFILE%\.local\bin\sql-beautify-zed.cmd
+```
+
+The formatter pins the exact vendored source using SHA-1
+`dde215b5ffe988d7e54e383d27e849ca07497412`, so an update to the VS Code
+extension cannot change its output.
+
+## Example
+
+Input:
+
+```sql
+select id,case when status=1 then '正常' else '异常' end as status_name from orders where id=1;
+```
+
+Output:
+
+```sql
+SELECT  id
+       ,CASE WHEN status = 1 THEN '正常'  ELSE '异常' END AS status_name
+FROM orders
+WHERE id = 1;
+```
+
+## Licenses and provenance
+
+The vendored formatter was extracted from the locally installed VS Code
+extension above. Its upstream and extension licenses are retained in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The wrapper and installer in
+this repository are MIT-licensed; see [LICENSE](LICENSE).

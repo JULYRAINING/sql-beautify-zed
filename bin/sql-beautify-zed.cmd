@@ -1,1 +1,8 @@
-QGVjaG8gb2ZmCnNldGxvY2FsCndoZXJlIG5vZGUgPm51bCAyPm51bAppZiBlcnJvcmxldmVsIDEgKAogIGVjaG8gc3FsLWJlYXV0aWZ5LXplZDogTm9kZS5qcyB3YXMgbm90IGZvdW5kIG9uIFBBVEguIEluc3RhbGwgTm9kZS5qcyBMVFMgYW5kIHJldHJ5LiAxPiYyCiAgZXhpdCAvYiAxMjcKKQpub2RlICIlfmRwMC4uXHNoYXJlXHNxbC1iZWF1dGlmeS16ZWRcc3FsLWJlYXV0aWZ5LXplZC5qcyIK
+@echo off
+setlocal
+where node >nul 2>nul
+if errorlevel 1 (
+  echo sql-beautify-zed: Node.js was not found on PATH. Install Node.js LTS and retry. 1>&2
+  exit /b 127
+)
+node "%~dp0..\share\sql-beautify-zed\sql-beautify-zed.js"
