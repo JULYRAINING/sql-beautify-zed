@@ -27,7 +27,8 @@ try {
     // The bundled formatter uses console.log internally. Zed expects stdout
     // to contain the formatted document only.
     console.log = () => {};
-    output = formatter.sql(input, true, false, false, 150);
+    // Retain the extension's behavior, but align AS up to column 400.
+    output = formatter.sql(input, true, false, false, 400);
   } finally {
     console.log = originalLog;
   }

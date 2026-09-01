@@ -6,7 +6,9 @@ extension `clarkyu.vscode-sql-beautify` version `0.3.23` from Zed.
 It intentionally vendors the formatter source that the extension actually
 loads. This is not equivalent to installing the current npm `vkbeautify`
 package: the bundled source contains SQL-specific CASE formatting, quoting,
-comment, indentation, and AS-alignment logic.
+comment, indentation, and AS-alignment logic. This package deliberately raises
+the extension's AS-alignment threshold from 150 to 400 columns, so long SELECT
+expressions align their aliases strictly.
 
 ## Requirements
 
