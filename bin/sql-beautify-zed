@@ -1,0 +1,29 @@
+#!/bin/sh
+# Stable external formatter for Zed. The launcher and the formatter are pinned
+# in this repository, independent of VS Code extension updates.
+
+set -u
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+share_dir=${SQL_BEAUTIFY_HOME:-$script_dir/../share/sql-beautify-zed}
+wrapper=$share_dir/sql-beautify-zed.js
+
+if [ ! -f "$wrapper" ]; then
+  echo "sql-beautify-zed: formatter not found at $wrapper" >&2
+  exit 127
+fi
+
+if command -v node >/dev/null 2>&1; then
+  exec node "$wrapper"
+fi
+
+# GUI-launched Zed may not inherit the shell's nvm PATH. Fall back to a local
+# nvm installation without assuming one particular Node version.
+if [ -d "$HOME/.nvm/versions/node" ]; then
+  node_bin=$(ls -1d "$HOME"/.nvm/versions/node/*/bin/node 2>/dev/null | sort -V | tail -1)
+  if [ -n "$node_bin" ]; then
+    exec "$node_bin" "$wrapper"
+  fi
+fi
+
+echo 'sql-beautify-zed: Node.js was not found; install Node.js or expose it on PATH.' >&2
+exit 127
