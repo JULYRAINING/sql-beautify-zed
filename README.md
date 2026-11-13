@@ -1,5 +1,7 @@
 # SQL Beautify for Zed
 
+[![CI](https://github.com/JULYRAINING/sql-beautify-zed/actions/workflows/ci.yml/badge.svg)](https://github.com/JULYRAINING/sql-beautify-zed/actions/workflows/ci.yml)
+
 Installers for using the customized SQL formatter bundled with VS Code
 extension `clarkyu.vscode-sql-beautify` version `0.3.23` from Zed, on Windows,
 macOS, and Linux.
